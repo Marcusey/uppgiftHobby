@@ -1,8 +1,4 @@
-import './style.css'
-
-import { setupCounter } from './counter.js'
-
-document.querySelector('#app').innerHTML = `
+document.querySelector('#counter').innerHTML = `
 
   <div class="card">
     <button id="counter" type="button"></button>
