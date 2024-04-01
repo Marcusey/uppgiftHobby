@@ -1,8 +1,14 @@
 import './style.css'
-import javascriptLogo from './javascript.svg'
-import viteLogo from '/vite.svg'
+
 import { setupCounter } from './counter.js'
 
+document.querySelector('#app').innerHTML = `
+
+  <div class="card">
+    <button id="counter" type="button"></button>
+  </div>
+
+`
 function setupCounter(element) {
   let counter = 0
   const setCounter = (count) => {
