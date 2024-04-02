@@ -4,8 +4,14 @@ function setupCounter(element) {
     counter = count
     element.innerHTML = `you made number ${counter} be counted`
   }
-  element.addEventListener('click', () => setCounter(counter + 1))
-  setCounter(0)
+
+  const incrementCounter = () => {
+    counter++
+    updateCounterDisplay()
+  }
+
+  element.addEventListener('click', incrementCounter)
+  updateCounterDisplay()
 }
 
 setupCounter(document.querySelector('#counter'))
