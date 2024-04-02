@@ -1,11 +1,17 @@
 function setupCounter(element) {
   let counter = 0
-  const setCounter = (count) => {
-    counter = count
-    element.innerHTML = `count is ${counter}`
+
+  const updateCounterDisplay = () => {
+    element.textContent = `count is ${counter}`
   }
-  element.addEventListener('click', () => setCounter(counter + 1))
-  setCounter(0)
+
+  const incrementCounter = () => {
+    counter++
+    updateCounterDisplay()
+  }
+
+  element.addEventListener('click', incrementCounter)
+  updateCounterDisplay()
 }
 
 setupCounter(document.querySelector('#counter'))
